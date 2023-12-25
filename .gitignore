@@ -1,3 +1,9 @@
 data/
+face_detection/
+face_alignment/
 landmarks/
+mouth/
+dataframe/
+checkpoint/
+custom_data/
 20words_landmarks_array.npy
