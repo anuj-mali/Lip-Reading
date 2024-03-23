@@ -15,14 +15,13 @@ class VideoProcess:
         self.crop_width = 96
         self.temporal_window = 12
 
-    def __call__(self, video_path, landmarks):
-        video,_,_ = read_video(str(video_path), pts_unit='sec')
+    def __call__(self, video_frames, landmarks):
         landmarks = landmarks_interpolation(landmarks)
 
         if not landmarks or len(landmarks) < self.temporal_window:
             return 
 
-        mouth_rois = self.crop_video(video.numpy(), landmarks)
+        mouth_rois = self.crop_video(np.array(video_frames), landmarks)
         return mouth_rois
 
     

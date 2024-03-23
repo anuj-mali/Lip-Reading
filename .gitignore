@@ -7,3 +7,6 @@ dataframe/
 checkpoint/
 custom_data/
 20words_landmarks_array.npy
+__pycache__/
+.ipynb_checkpoints/
+results/*
